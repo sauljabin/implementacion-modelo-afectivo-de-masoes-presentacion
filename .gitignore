@@ -1,0 +1,14 @@
+*~
+*.aux
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.fdb_latexmk
+.DS_Store
+.directory
+Thumbs.db
+Desktop.ini
+/build
