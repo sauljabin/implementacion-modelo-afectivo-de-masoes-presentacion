@@ -3,6 +3,8 @@
 \definecolor{UCLAOrange}{RGB}{255,163,0}
 \definecolor{UCLABlue}{RGB}{10,67,118}
 
+\newcommand{\beamerthemeUCLAversion}{1.0.0}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Outer theme
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,7 +58,7 @@
 
 \newcommand\DoBlueBackground{%
 \pgfpathmoveto{\pgfpointorigin}
-\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-\paperheight}}
+\pgfpathrectanglecorners{\pgfpoint{-1pt}{1pt}}{\pgfpoint{\paperwidth}{-\paperheight}}
 \pgfsetfillcolor{UCLABlue}
 \pgfusepath{fill}
 \pgftext[at=\pgfpoint{\paperwidth}{-\paperheight},right,base]{\pgfuseimage{large-corner}}
@@ -157,6 +159,18 @@
 \DoBlueBackground
 \pgftext[at=\pgfpoint{.5\paperwidth}{-.5\paperheight},center,center]{\pgfuseimage{white-logo}}
 \pgftext[at=\pgfpoint{.5\paperwidth}{-.15\paperheight},center,center]{\huge\structure{Gracias}}
+\end{pgfpicture}
+\end{frame}
+}
+
+\newcommand\DoBlueBackgroundTitle[1]{
+\begin{frame}[plain,t]
+\begin{pgfpicture}
+\pgf@relevantforpicturesizefalse
+\pgftransformxshift{-\Gm@lmargin}
+\pgftransformyshift{5.5pt}
+\DoBlueBackground
+\pgftext[at=\pgfpoint{.5\paperwidth}{-.5\paperheight},center,center]{\huge\structure{#1}}
 \end{pgfpicture}
 \end{frame}
 }
