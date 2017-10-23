@@ -29,7 +29,7 @@
 \item Propuesta
 \item Casos de Estudio
 \item Demostración
-\item Conclusión
+\item Conclusión y Trabajos Futuros
 \item Preguntas
 \end{itemize}
 \end{frame}
@@ -46,14 +46,17 @@ Implementar el modelo afectivo de MASOES en un sistema multiagente
 
 \begin{frame}
 \frametitle{MASOES}
-La una arquitectura multiagente para sistemas emergentes y auto-organizados llamada
-MASOES (Multiagent Architecture for Self-Organizing and Emergent Systems, en inglés),
-es una herramienta para el diseño no
-formal de sistemas, que produzcan un estado auto-organizado el cual emerja de
-las interacciones locales entre los agentes y de los cambios que se dan en el
-entorno. En esta arquitectura, cada agente puede cambiar su comportamiento
-dinámicamente, guiado por su estado emocional, para satisfacer dinámicamente los
-objetivos del sistema a través de la auto-organización de sus actividades.
+\begin{itemize}
+	\item Arquitectura multiagente para sistemas emergentes y auto-organizados
+	\item MASOES (Multiagent Architecture for Self-Organizing and Emergent Systems, en inglés)
+  \item Herramienta para el diseño no
+  formal de sistemas, que produzcan un estado auto-organizado el cual emerja de
+  las interacciones locales entre los agentes y de los cambios que se dan en el
+  entorno
+  \item Cada agente puede cambiar su comportamiento
+  dinámicamente, guiado por su estado emocional, para satisfacer dinámicamente los
+  objetivos del sistema a través de la auto-organización de sus actividades
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -222,9 +225,122 @@ $  \sigma_S(Ag) = \sqrt{\frac{\sum_{i=1}^n(S_i - \bar S(Ag))^2}{n}},  \forall ag
 \end{frame}
 
 \section{Casos de Estudio}
+
 \begin{frame}
 \frametitle{Casos de Estudio}
+\framesubtitle{Estímulos Asociados al Usuario Registrado Propuestos para los Casos de Estudio de Wikipedia}
+\begin{table}[!ht]
+\centering
+\scriptsize
+\begin{tabular}{lll}
+\hline
+Estímulo & $P_a$ & $P_s$ \\
+\hline\hline
+\multicolumn{3}{l}{\textbf{Aumento de Reputación}} \\ \hline\hline
+Artículo Nuevo & 0.05 & 0.05  \\ \hline
+Nueva Edición & 0.03 & 0.04  \\ \hline
+Artículo Sobresaliente & 0.08 & 0.08  \\ \hline\hline
+\multicolumn{3}{l}{\textbf{Decremento de Reputación}} \\ \hline\hline
+Guerra de Ediciones & -0.08 & -0.08 \\ \hline
+Artículo Borrado & -0.06 & -0.06  \\ \hline
+Artículo Modificado & -0.02 & -0.03  \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
 
+\begin{frame}
+\frametitle{Caso de Estudio 1: Emociones a Nivel Social}
+\framesubtitle{Escenario 1: Baja Dispersión Emocional y Bajo Número de Agentes}
+\begin{columns}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario1-emocioncentral}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario1-dispersionemocional}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Caso de Estudio 1: Emociones a Nivel Social}
+\framesubtitle{Escenario 2: Alta Dispersión Emocional y Bajo Número de Agentes}
+\begin{columns}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario2-emocioncentral}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario2-dispersionemocional}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Caso de Estudio 1: Emociones a Nivel Social}
+\framesubtitle{Escenario 3: Baja Dispersión Emocional y Alto Número de Agentes}
+\begin{columns}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario3-emocioncentral-final}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario3-dispersionemocional}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Caso de Estudio 1: Emociones a Nivel Social}
+\framesubtitle{Escenario 4: Alta Dispersión Emocional y Alto Número de Agentes}
+\begin{columns}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario4-emocioncentral-final}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso1escenario4-dispersionemocional}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Caso de Estudio 2: Emociones a Nivel Individual}
+\framesubtitle{Escenario 1: Grado de Satisfacción Alto y Activación Alto, Medio y Bajo}
+\begin{columns}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso2escenerio1-estado-emocional-colaborador1}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso2escenerio1-modificacion-de-emociones}
+
+\includegraphics[width=5cm]{ilustraciones/caso2escenerio1-modificacion-de-comportamiento}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Caso de Estudio 2: Emociones a Nivel Individual}
+\framesubtitle{Escenario 2: Grado de Satisfacción y Activación Medio y Bajo}
+\begin{columns}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso2escenerio2-estado-emocional-colaborador1}
+\column{0.5\textwidth}
+\tiny
+\centering
+\includegraphics[width=5cm]{ilustraciones/caso2escenerio2-modificacion-de-emociones}
+
+\includegraphics[width=5cm]{ilustraciones/caso2escenerio2-modificacion-de-comportamiento}
+\end{columns}
 \end{frame}
 
 \DoBlueBackgroundTitle{Demostración}
@@ -232,7 +348,40 @@ $  \sigma_S(Ag) = \sqrt{\frac{\sum_{i=1}^n(S_i - \bar S(Ag))^2}{n}},  \forall ag
 \section{Conclusión}
 \begin{frame}
 \frametitle{Conclusión}
+\begin{itemize}
+  \item Se abordó la implementación del modelo afectivo
+  propuesto en MASOES, y por ende su componente conductual.
+	\item Se propone el cálculo de
+  la Emoción Social de un grupo de agentes.
+  \item Los resultados obtenidos demuestran que la implementación cumple
+  con lo especificado en MASOES, tanto a nivel individual como colectivo.
+  \item Se pudo comprobar que la emoción central es más válida a medida que la dispersión
+  emocional es más cercana a cero, ya que se trata de un conjunto de agentes que tienen emociones muy parecidas (homogéneas).
+\end{itemize}
+\end{frame}
 
+\begin{frame}
+\frametitle{Conclusión}
+\begin{itemize}
+  \item Este trabajo proporciona un marco de trabajo el cual se puede seguir extendiendo,
+  para simular cualquier tipo de sistema emergente y auto-organizado modelado con MASOES.
+  \item Se propone una ontología de
+  comunicación para MASOES, específicamente para agentes estandarizados FIPA, con ella
+  es posible comunicar los agentes emocionales entre sí o con otros tipos de agentes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Trabajos Futuros}
+\begin{itemize}
+  \item Se podría implementar otros componentes individuales de la arquitectura de MASOES,
+  como son, los componentes Cognitivo, Reactivo y Social, y componentes colectivos como
+  la Base de Conocimiento Colectivo
+  \item El presente trabajo es susceptible a modificaciones y mejoras.
+  \item Proponer un cálculo de emoción social,
+  que pueda dar como resultado más de una emoción central, esto, basado en las agrupaciones de estados emocionales
+  que puedan emerger en el grupo de agentes
+\end{itemize}
 \end{frame}
 
 \DoBlueBackgroundTitle{Preguntas}
