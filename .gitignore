@@ -7,6 +7,7 @@
 *.snm
 *.toc
 *.fdb_latexmk
+*.pdf
 .DS_Store
 .directory
 Thumbs.db
