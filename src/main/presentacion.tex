@@ -153,103 +153,13 @@ Acción Evaluar Estímulo
 
 \begin{frame}
 \frametitle{Componente Conductual}
-\framesubtitle{Base de Conocimiento Conductual}
-\centering
-Conocimiento Relacionado al Agente en la BCC
-\begin{table}[!ht]
-\centering
-\tiny
-\begin{tabular}{ll}
-\hline
-\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
-\hline
-\hline
-yo(agente). & Definición del agente actual. \\\hline
-otro(A) :- not yo(A). & Definición de otro agente. \\ & A representa el nombre del agente \\
-\hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-\begin{frame}
-\frametitle{Componente Conductual}
-\framesubtitle{Base de Conocimiento Conductual}
-\centering
-Conocimiento Relacionado a las Emociones en la BCC
-\begin{table}[!ht]
-\centering
-\tiny
-\begin{tabular}{ll}
-\hline
-\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
-\hline
-\hline
-tipo\_emocion(admiracion, positiva). & La admiración es positiva \\\hline
-tipo\_emocion(compasion, positiva). & La compasión es positiva \\\hline
-tipo\_emocion(felicidad, positiva). & La felicidad es positiva \\\hline
-tipo\_emocion(alegria, positiva). & La alegría es positiva \\\hline
-tipo\_emocion(rechazo, ligeramente\_negativa). & El rechazo es ligeramente negativa \\\hline
-tipo\_emocion(tristeza, ligeramente\_negativa). & La tristeza es ligeramente negativa \\\hline
-tipo\_emocion(ira, altamente\_negativa). & La ira es altamente negativa \\\hline
-tipo\_emocion(depresion, altamente\_negativa). & La depresión es altamente negativa \\
-\hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-\begin{frame}
-\frametitle{Componente Conductual}
-\framesubtitle{Base de Conocimiento Conductual}
-\centering
-Conocimiento Relacionado a las Comportamientos en la BCC
-\begin{table}[!ht]
-\centering
-\tiny
-\begin{tabular}{ll}
-\hline
-\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
-\hline
-\hline
-prioridad\_comportamiento(E, imitativo) & El comportamiento es imitativo si la \\
-:- tipo\_emocion(E, positiva). & emoción E es positiva \\\hline
-prioridad\_comportamiento(E, cognitivo) & El comportamiento es cognitivo si la \\
-:- tipo\_emocion(E, ligeramente\_negativa). & emoción E es ligeramente negativa \\\hline
-prioridad\_comportamiento(E, reactivo) &  El comportamiento es reactivo si la  \\
-:- tipo\_emocion(E, altamente\_negativa). & emoción E es altamente negativa \\
-\hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-\begin{frame}
-\frametitle{Componente Conductual}
-\framesubtitle{Base de Conocimiento Conductual}
-\centering
-Ejemplos de Conocimiento de Estímulos en la BCC
-\begin{table}[!ht]
-\centering
-\tiny
-\begin{tabular}{ll}
-\hline
-\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
-\hline
-\hline
-estimulo(A, saludar, 0.01, 0.01) :- otro(A). & Para el agente A el estímulo saludar aumentará \\ & la activación en 0.01 y la satisfacción en 0.01 \\ & si el estímulo fue enviado por otro agente \\ \hline
-estimulo(A, despertar, 0.02, -0.1) :- yo(A). & Para el agente A el estímulo despertar aumentará \\ & la activación en 0.02 y disminuirá la satisfacción \\ & en 0.1 si el evento fue generado por el mismo agente \\
-\hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-\begin{frame}
-\frametitle{Componente Conductual}
 \framesubtitle{Procesamiento de Estímulo}
 \centering
 \includegraphics[width=6cm]{ilustraciones/procesamiento-estimulo}
 \end{frame}
 
 \begin{frame}
-\frametitle{Aspectos Nivel Colectivo}
+\frametitle{Aspectos Propuestos a Nivel Colectivo}
 \framesubtitle{Calculo de la Emoción Social}
 \begin{exampleblock}{Emoción Social}
 $ES(Ag) = \{EC(Ag), m(Ag), \sigma(Ag)\}$
@@ -262,7 +172,7 @@ a la $EC$.
 \end{frame}
 
 \begin{frame}
-\frametitle{Aspectos Nivel Colectivo}
+\frametitle{Aspectos Propuestos a Nivel Colectivo}
 \framesubtitle{Calculo de la Emoción Social}
 \begin{exampleblock}{Emoción Central}
 $EC(Ag) = (\bar A(Ag), \bar S(Ag))$
@@ -279,7 +189,7 @@ $\bar S(Ag)=\frac{\sum_{i=1}^n S_i}{n}, \forall ag_i \in Ag$
 \end{frame}
 
 \begin{frame}
-\frametitle{Aspectos Nivel Colectivo}
+\frametitle{Aspectos Propuestos a Nivel Colectivo}
 \framesubtitle{Calculo de la Emoción Social}
 \begin{exampleblock}{Distancia Máxima}
 $ m(Ag) = (m_A(Ag), m_S(Ag))$
@@ -296,7 +206,7 @@ $m_S(Ag) = max\left(\sqrt{(S_i - \bar S(Ag))^2}\right), \forall ag_i \in Ag$
 \end{frame}
 
 \begin{frame}
-\frametitle{Aspectos Nivel Colectivo}
+\frametitle{Aspectos Propuestos a Nivel Colectivo}
 \framesubtitle{Calculo de la Emoción Social}
 \begin{exampleblock}{Dispersión Emocional}
 $ \sigma(Ag) = (\sigma_A(Ag), \sigma_S(Ag))$
