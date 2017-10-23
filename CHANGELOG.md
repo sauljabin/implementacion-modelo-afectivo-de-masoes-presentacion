@@ -13,3 +13,5 @@ versionamiento [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 - Se agrega comando \beamerthemeUCLAversion para obtener la versión actual de la plantilla
 - Se agrega el comando \DoBlueBackgroundTitle para títulos grandes
 - Se agregan todos los logos de la universidad
+- Se agrega comando \quotes para comillas
+- Comando \Rsquared para símbolo de R cuadrado
