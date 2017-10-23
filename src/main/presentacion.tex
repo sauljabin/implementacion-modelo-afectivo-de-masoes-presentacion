@@ -27,7 +27,6 @@
 \item MASOES
 \item Modelo Afectivo de MASOES
 \item Propuesta
-\item Herramienta Computacional Desarrollada
 \item Casos de Estudio
 \item Demostración
 \item Conclusión
@@ -43,11 +42,6 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Computación Emocional}
-
-\end{frame}
-
-\begin{frame}
 \frametitle{Objetivo General}
 \huge
 Implementar el modelo afectivo de MASOES en un sistema multiagente
@@ -57,12 +51,7 @@ Implementar el modelo afectivo de MASOES en un sistema multiagente
 
 \begin{frame}
 \frametitle{MASOES}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{MASOES}
-La arquitectura multiagente para sistemas emergentes y auto-organizados llamada
+La una arquitectura multiagente para sistemas emergentes y auto-organizados llamada
 MASOES (Multiagent Architecture for Self-Organizing and Emergent Systems, en inglés),
 es una herramienta para el diseño no
 formal de sistemas, que produzcan un estado auto-organizado el cual emerja de
@@ -70,6 +59,20 @@ las interacciones locales entre los agentes y de los cambios que se dan en el
 entorno. En esta arquitectura, cada agente puede cambiar su comportamiento
 dinámicamente, guiado por su estado emocional, para satisfacer dinámicamente los
 objetivos del sistema a través de la auto-organización de sus actividades.
+\end{frame}
+
+\begin{frame}
+\frametitle{MASOES}
+\framesubtitle{Componentes de MASOES a Nivel Individual}
+\centering
+\includegraphics[width=7cm]{ilustraciones/componentes-masoes-individual}
+\end{frame}
+
+\begin{frame}
+\frametitle{MASOES}
+\framesubtitle{Componente Conductual}
+\centering
+\includegraphics[width=5cm]{ilustraciones/componente-conductual}
 \end{frame}
 
 \begin{frame}
@@ -97,6 +100,48 @@ también en el intervalo $[-1, 1]$.
 \end{columns}
 \end{frame}
 
+\begin{frame}
+\frametitle{MASOES}
+\framesubtitle{Comportamientos Según el Estado Emocional del Agente}
+\begin{table}[!ht]
+\centering
+\scriptsize
+\begin{tabular}{ccc}
+\hline
+\bfseries Emoción & \bfseries Tipo de Emoción & \bfseries Comportamiento \\
+\hline\hline
+Felicidad & Positivo & Imitación \\
+Alegría & Positivo & Imitación \\
+Compasión & Positivo & Imitación \\
+Admiración & Positivo & Imitación \\
+Tristeza & Ligeramente Negativo & Cognitivo \\
+Rechazo & Ligeramente Negativo & Cognitivo \\
+Depresión & Altamente Negativo & Reactivo \\
+Ira & Altamente Negativo & Reactivo \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{MASOES}
+\framesubtitle{Reglas de Priorización de Comportamientos}
+\begin{table}[!ht]
+\centering
+\scriptsize
+\begin{tabular}{ll}
+\hline
+\textbf{Regla 1:} & Si el \textit{Estado Emocional} es \textit{Positivo} \\
+& entonces priorizar \textit{Comportamiento Imitativo} \\
+\textbf{Regla 2:} & Sino Si el \textit{Estado Emocional} es \textit{Ligeramente Negativo} \\
+& entonces priorizar \textit{Comportamiento Cognitivo} \\
+\textbf{Regla 3:} & Sino Si el \textit{Estado Emocional} es \textit{Altamente Negativo} \\
+& entonces priorizar \textit{Comportamiento Reactivo} \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
 \section{Propuesta}
 
 \begin{frame}
@@ -106,7 +151,7 @@ también en el intervalo $[-1, 1]$.
 \column{0.5\textwidth}
 \textbf{JADE}\\
 \textbf{Java Agent
-DEvelopment}, uno de los marcos de trabajo con paradigma de POA \textbf{Programación Orientada a Agentes}
+DEvelopment}, uno de los marcos de trabajo con paradigma de POA (\textbf{Programación Orientada a Agentes})
 más populares, implementado en el lenguaje de programación Java
 \column{0.5\textwidth}
 \textbf{FIPA}\\
@@ -119,28 +164,317 @@ de agentes heterogéneos y los servicios que pueden representar
 \begin{frame}
 \frametitle{Propuesta}
 \framesubtitle{Aspectos Arquitecturales}
+\centering
 \includegraphics[width=8cm]{ilustraciones/arquitectura}
 \end{frame}
 
 \begin{frame}
 \frametitle{Propuesta}
 \framesubtitle{Comunicación Entre Agentes}
+\centering
 \includegraphics[width=8cm]{ilustraciones/comunicacion-entre-hosts}
 \end{frame}
 
 \begin{frame}
 \frametitle{Aspectos Propuestos a Nivel Individual}
+\framesubtitle{Propuesta de Una Ontología Para MASOES}
+\begin{columns}
+\column{0.5\textwidth}
+\centering
+\tiny
+\includegraphics[width=5cm]{ilustraciones/ontologia-masoes-estado}
+\\
+Acción Consultar Estado del Agente
+\column{0.5\textwidth}
+\centering
+\tiny
+\includegraphics[width=5cm]{ilustraciones/ontologia-masoes-estimulo}
+\\
+Acción Evaluar Estímulo
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Propuestos a Nivel Individual}
+\framesubtitle{Protocolo de Comunicación Para Peticiones FIPA}
+\centering
+\includegraphics[width=4cm]{ilustraciones/flujo-fipa-protocolo-request}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Propuestos a Nivel Individual}
+\framesubtitle{Diseño del Agente Emocional}
+\centering
+\includegraphics[width=7cm]{ilustraciones/diseno-nivel-individual}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Propuestos a Nivel Individual}
+\framesubtitle{Diseño del Componente Conductual}
+\centering
+\includegraphics[width=9cm]{ilustraciones/diseno-componente-conductual}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Base de Conocimiento Conductual}
+\centering
+Conocimiento Relacionado al Agente en la BCC
+\begin{table}[!ht]
+\centering
+\tiny
+\begin{tabular}{ll}
+\hline
+\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
+\hline
+\hline
+yo(agente). & Definición del agente actual. \\\hline
+otro(A) :- not yo(A). & Definición de otro agente. \\ & A representa el nombre del agente \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Base de Conocimiento Conductual}
+\centering
+Conocimiento Relacionado a las Emociones en la BCC
+\begin{table}[!ht]
+\centering
+\tiny
+\begin{tabular}{ll}
+\hline
+\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
+\hline
+\hline
+tipo\_emocion(admiracion, positiva). & La admiración es positiva \\\hline
+tipo\_emocion(compasion, positiva). & La compasión es positiva \\\hline
+tipo\_emocion(felicidad, positiva). & La felicidad es positiva \\\hline
+tipo\_emocion(alegria, positiva). & La alegría es positiva \\\hline
+tipo\_emocion(rechazo, ligeramente\_negativa). & El rechazo es ligeramente negativa \\\hline
+tipo\_emocion(tristeza, ligeramente\_negativa). & La tristeza es ligeramente negativa \\\hline
+tipo\_emocion(ira, altamente\_negativa). & La ira es altamente negativa \\\hline
+tipo\_emocion(depresion, altamente\_negativa). & La depresión es altamente negativa \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Base de Conocimiento Conductual}
+\centering
+Conocimiento Relacionado a las Comportamientos en la BCC
+\begin{table}[!ht]
+\centering
+\tiny
+\begin{tabular}{ll}
+\hline
+\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
+\hline
+\hline
+prioridad\_comportamiento(E, imitativo) & El comportamiento es imitativo si la \\
+:- tipo\_emocion(E, positiva). & emoción E es positiva \\\hline
+prioridad\_comportamiento(E, cognitivo) & El comportamiento es cognitivo si la \\
+:- tipo\_emocion(E, ligeramente\_negativa). & emoción E es ligeramente negativa \\\hline
+prioridad\_comportamiento(E, reactivo) &  El comportamiento es reactivo si la  \\
+:- tipo\_emocion(E, altamente\_negativa). & emoción E es altamente negativa \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Base de Conocimiento Conductual}
+\centering
+Ejemplos de Conocimiento de Estímulos en la BCC
+\begin{table}[!ht]
+\centering
+\tiny
+\begin{tabular}{ll}
+\hline
+\scriptsize \bfseries Cláusula & \scriptsize \bfseries Descripción \\
+\hline
+\hline
+estimulo(A, saludar, 0.01, 0.01) :- otro(A). & Para el agente A el estímulo saludar aumentará \\ & la activación en 0.01 y la satisfacción en 0.01 \\ & si el estímulo fue enviado por otro agente \\ \hline
+estimulo(A, despertar, 0.02, -0.1) :- yo(A). & Para el agente A el estímulo despertar aumentará \\ & la activación en 0.02 y disminuirá la satisfacción \\ & en 0.1 si el evento fue generado por el mismo agente \\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Configurador Emocional}
+\centering
+Modelo Afectivo
+
+\includegraphics[width=6cm]{ilustraciones/modelo-afectivo-propuesto}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Configurador Emocional}
+\centering
+
+\begin{exampleblock}{Actualización de Activación}
+$A'(ag_i) = A_i + P_A$
+\end{exampleblock}
+
+\begin{alertblock}{Actualización de Satisfacción}
+$ S'(ag_i) = S_i + P_S$
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Configurador Emocional}
+\centering
+Algoritmo del Configurador Emocional Para la Actualización del Estado Emocional del Agente
+\begin{table}[!ht]
+\tiny
+\begin{tabular}{l}
+\hline
+\textbf{Entrada:} estímulo y BCC \\
+\hline
+Consultar en la BCC si el estímulo existe \\
+\textbf{Si} existe conocimiento del estímulo \textbf{entonces:} \\
+~~~~~PA  $\leftarrow$ obtener PA desde BCC \\
+~~~~~PS  $\leftarrow$ obtener PS desde BCC \\
+~~~~~Activación $\leftarrow$ Activación + PA \\
+~~~~~Satisfacción $\leftarrow$ Satisfacción + PS \\
+~~~~~Estado Emocional $\leftarrow$ Crear nuevo Estado Emocional a partir de los nuevos \\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~valores de Activación y Satisfacción \\
+~~~~~Emoción $\leftarrow$ Consultar emoción en Modelo Afectivo a partir del nuevo Estado Emocional \\
+\textbf{Fin si} \\\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Manejador de Comportamiento}
+\centering
+Algoritmo del Manejador de Comportamiento Para la Actualización de la Prioridad de Comportameinto
+\begin{table}[!ht]
+\tiny
+\begin{tabular}{l}
+\hline
+\textbf{Entrada:} emoción provista por el configurador emocional \\
+\hline
+Consultar en la BCC la prioridad del comportamiento \\
+\textbf{Si} existe comportamiento asociado a la emoción \textbf{entonces:} \\
+~~~~~Comportamiento  $\leftarrow$ obtener comportamiento desde BCC \\
+\textbf{Fin si} \\\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Componente Conductual}
+\framesubtitle{Manejador de Comportamiento}
+\centering
+\includegraphics[width=6cm]{ilustraciones/procesamiento-estimulo}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
+\begin{exampleblock}{Emoción Social}
+$ES(Ag) = \{EC(Ag), m(Ag), \sigma(Ag)\}$
+\end{exampleblock}
+
+Donde $Ag$ representa al grupo de agentes en estudio, $EC(Ag)$ se refiere a la
+emoción central exhibida por el grupo de agentes, $m(Ag)$ es el estado emocional
+más alejado de la $EC$, $\sigma(Ag)$ representa la dispersión emocional entorno
+a la $EC$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
+\begin{exampleblock}{Emoción Central}
+$EC(Ag) = (\bar A(Ag), \bar S(Ag))$
+\end{exampleblock}
+
+Donde $Ag$ representa al grupo de agentes en estudio, $\bar A$ es el promedio
+de activación y $\bar S$ el promedio de satisfacción del grupo en estudio.
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
+
+\begin{exampleblock}{Promedio de la Activación}
+$\bar A(Ag)=\frac{\sum_{i=1}^n A_i}{n}, \forall ag_i \in Ag$ \\
+\end{exampleblock}
+
+\begin{exampleblock}{Promedio de la Satisfacción}
+$\bar S(Ag)=\frac{\sum_{i=1}^n S_i}{n}, \forall ag_i \in Ag$
+\end{exampleblock}
+
+Donde $Ag$ representa al grupo de agentes en estudio, $A_i$ es la activación y $S_i$ la satisfacción del agente $i$, para $1 \leq i \leq n$.
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
+\begin{exampleblock}{Distancia Máxima}
+$ m(Ag) = (m_A(Ag), m_S(Ag))$
+\end{exampleblock}
 
+Donde $Ag$ representa al grupo de agentes en estudio, $m_A(Ag)$ es
+la activación más alejada (máxima activación) y $m_S(Ag)$ es la satisfacción más
+alejada (máxima satisfacción).
 \end{frame}
 
 \begin{frame}
-\frametitle{Herramienta Computacional}
+\frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
 
+\begin{exampleblock}{Distancia Máxima de la Activación}
+$m_A(Ag) = max\left(\sqrt{(A_i - \bar A(Ag))^2}\right), \forall ag_i \in Ag$
+\end{exampleblock}
+
+\begin{exampleblock}{Distancia Máxima de la Satisfacción}
+$m_S(Ag) = max\left(\sqrt{(S_i - \bar S(Ag))^2}\right), \forall ag_i \in Ag$
+\end{exampleblock}
+
+Donde $Ag$ es el grupo de agentes, $A_i$ es la activación y $S_i(Ag)$ la satisfacción del agente $ag_i$,
+ $\bar A$ es el promedio de activación y $\bar S(Ag)$ el promedio de satisfacción del grupo en estudio.
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
+\begin{exampleblock}{Dispersión Emocional}
+$ \sigma(Ag) = (\sigma_A(Ag), \sigma_S(Ag))$
+\end{exampleblock}
+
+Donde $\sigma_A(Ag)$ es la desviación estándar de la activación y
+$\sigma_S(Ag)$ es la desviación estándar de la satisfacción del grupo
+de agentes $Ag$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Aspectos Nivel Colectivo}
+\framesubtitle{Calculo de la Emoción Social}
+
+\begin{exampleblock}{Dispersión Emocional de la Activación}
+$\sigma_A(Ag) = \sqrt{\frac{\sum_{i=1}^n(A_i - \bar A(Ag))^2}{n}},  \forall ag_i \in Ag$
+\end{exampleblock}
+
+\begin{exampleblock}{Dispersión Emocional de la Satisfacción}
+$  \sigma_S(Ag) = \sqrt{\frac{\sum_{i=1}^n(S_i - \bar S(Ag))^2}{n}},  \forall ag_i \in Ag$
+\end{exampleblock}
+
+Donde $Ag$ es el grupo de agentes, $A_i$ es la activación y $S_i$ la satisfacción del agente $ag_i$,
+para $1 \leq i \leq n$, $\bar A(Ag)$ es el promedio de activación y $\bar S(Ag)$
+el promedio de satisfacción del grupo en estudio.
 \end{frame}
 
 \section{Casos de Estudio}
