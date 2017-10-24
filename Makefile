@@ -4,7 +4,7 @@ presentacion:
 	@ cd src/main/ && ../../scripts/build.sh presentacion
 
 preview:
-	@ cd src/main/ && ../../scripts/build.sh "-pvc presentacion"
+	@ cd src/main/ && ../../scripts/preview.sh presentacion
 
 docker-build:
 	@ docker build -t latex .
@@ -15,4 +15,4 @@ docker-presentacion:
 
 docker-preview:
 	@ mkdir -p build/
-	@ $(docker) -t -i latex "cd /src/main && /scripts/build.sh '-pvc presentacion'"
+	@ $(docker) -t -i latex "cd /src/main && /scripts/preview.sh presentacion"
